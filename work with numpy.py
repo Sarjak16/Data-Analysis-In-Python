@@ -1,3 +1,4 @@
+#.....................................................................................................................................................
 # Import the numpy package as np, so that you can refer to numpy with np.
 # Use np.array() to create a numpy array from baseball. Name this array np_baseball.
 # Print out the type of np_baseball to check that you got it right.
@@ -92,7 +93,7 @@ print(bmi[light])
 
 
 
-# #SUBSETTING NUMPY
+# #SUBSETTING NUMPY.............................................................................................................................................
 # Subset np_weight_lb by printing out the element at index 50.
 # Print out a sub-array of np_height_in that contains the elements at index 100 up to and including index 110.
 
@@ -114,7 +115,7 @@ print(np_height_in[100:111])
 
 
 
-#2D NUMPY ARRAYS
+#2D NUMPY ARRAYS.........................................................................................................................................
 # Use np.array() to create a 2D numpy array from baseball. Name it np_baseball.
 # Print out the type of np_baseball.
 # Print out the shape attribute of np_baseball. Use np_baseball.shape.
@@ -181,8 +182,30 @@ np_weight_lb=np_baseball[:,1]
 # Print out height of 124th player
 print(np_baseball[123,0])
 
+#2D arithmatic:.................................................................................................................................................
 
+# You managed to get hold of the changes in height, weight and age of all baseball players. It is available as a 2D numpy array, updated. Add np_baseball and updated and print out the result.
+# You want to convert the units of height and weight to metric (meters and kilograms, respectively). As a first step, create a numpy array with three values: 0.0254, 0.453592 and 1. Name this array conversion.
+# Multiply np_baseball with conversion and print out the result.
 
+#solution:
+# baseball is available as a regular list of lists
+# updated is available as 2D numpy array
+
+# Import numpy package
+import numpy as np
+
+# Create np_baseball (3 cols)
+np_baseball = np.array(baseball)
+
+# Print out addition of np_baseball and updated
+print(np_baseball + updated)
+
+# Create numpy array: conversion
+conversion= np.array([0.0254,0.453592,1])
+
+# Print out product of np_baseball and conversion
+print(np_baseball*conversion)
 
 
 
