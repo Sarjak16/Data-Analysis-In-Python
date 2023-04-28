@@ -49,4 +49,16 @@ while offset != 0 :
     else : 
       offset= offset +1    
     print(offset)
+    
+#     For loop:.............................................................................................
+#     Write a for loop that iterates over all elements of the areas list and prints out every element separately.
+#     SOLUTION:
+# areas list
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Code the for loop
+for area in areas :
+    print(area)
+
+        
 
