@@ -92,3 +92,15 @@ house = [["hallway", 11.25],
 # Build a for loop from scratch
 for key, value in house:
     print("the " + str(key) + " is " + str(value) + " sqm")
+
+    
+#     Write a for loop that goes through each key:value pair of europe.
+#    On each iteration, "the capital of x is y" should be printed out, where x is the key and y is the value of the pair.
+#      solution:
+# Definition of dictionary
+europe = {'spain':'madrid', 'france':'paris', 'germany':'berlin',
+          'norway':'oslo', 'italy':'rome', 'poland':'warsaw', 'austria':'vienna' }
+          
+# Iterate over europe
+for key,value in europe.items() :
+    print("the capital of " + key + "is" + str(value))
