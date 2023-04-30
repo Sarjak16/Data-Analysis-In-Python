@@ -108,7 +108,6 @@ for x in range(100) :
     if dice <= 2:
         # Replace below: use max to make sure step can't go below 0
         step = max(0,step-1)
-        step = step - 1
     elif dice <= 5:
         step = step + 1
     else:
