@@ -36,3 +36,15 @@ homelessness_reg_fam = homelessness.sort_values(["region", "family_members"] ,as
 
 # Print the top few rows
 print(homelessness_reg_fam.head())
+
+
+#sorting columns..........................................................................................................
+# Create a DataFrame called individuals that contains only the individuals column of homelessness.
+# Print the head of the result
+
+# Select the individuals column
+individuals = homelessness["individuals"]
+
+
+# Print the head of the result
+print(individuals.head())
