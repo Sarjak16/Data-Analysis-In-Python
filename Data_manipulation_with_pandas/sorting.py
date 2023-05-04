@@ -48,3 +48,13 @@ individuals = homelessness["individuals"]
 
 # Print the head of the result
 print(individuals.head())
+
+
+# subsetting rows..........................................................................................................................
+# Filter homelessness for cases where the number of individuals is greater than ten thousand, assigning to ind_gt_10k. View the printed result.
+#solution:
+# Filter for rows where individuals is greater than 10000
+ind_gt_10k = homelessness[homelessness["individuals"] >1000]
+
+# See the result
+print(ind_gt_10k)
