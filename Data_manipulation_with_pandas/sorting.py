@@ -54,7 +54,18 @@ print(individuals.head())
 # Filter homelessness for cases where the number of individuals is greater than ten thousand, assigning to ind_gt_10k. View the printed result.
 #solution:
 # Filter for rows where individuals is greater than 10000
-ind_gt_10k = homelessness[homelessness["individuals"] >1000]
+ind_gt_10k = homelessness[homelessness["individuals"] >10000]
 
 # See the result
 print(ind_gt_10k)
+
+
+# 2
+# Filter homelessness for cases where the USA Census region is "Mountain", assigning to mountain_reg. View the printed result.
+#solution:
+
+# Filter for rows where region is Mountain
+mountain_reg = homelessness[homelessness["region"] == "Mountain"]
+
+# See the result
+print(mountain_reg)
