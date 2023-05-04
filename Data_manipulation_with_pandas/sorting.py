@@ -16,3 +16,13 @@ homelessness_fam = homelessness.sort_values("family_members", ascending= False)
 
 # Print the top few rows
 print(homelessness_fam.head())
+
+
+# Sort homelessness first by region (ascending), and then by number of family members (descending). Save this as homelessness_reg_fam.
+# Print the head of the sorted DataFrame.
+
+# Sort homelessness by region, then descending family members
+homelessness_reg_fam = homelessness.sort_values("region", ascending= False)
+
+# Print the top few rows
+print(homelessness_reg_fam.head())
