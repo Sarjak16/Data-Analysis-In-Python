@@ -27,3 +27,17 @@ avocados_complete = avocados_2016.dropna()
 
 # Check if any columns contain missing values
 print(avocados_complete.isna().any())
+
+
+# A list has been created, cols_with_missing, containing the names of columns with missing values: "small_sold", "large_sold", and "xl_sold".
+# Create a histogram of those columns.
+# Show the plot.
+
+# List the columns with missing values
+cols_with_missing = ["small_sold", "large_sold", "xl_sold"]
+
+# Create histograms showing the distributions cols_with_missing
+avocados_2016[cols_with_missing].hist()
+
+# Show the plot
+plt.show()
