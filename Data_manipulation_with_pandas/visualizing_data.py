@@ -45,3 +45,21 @@ avocados.plot(x="nb_sold", y="avg_price", kind="scatter", title="Number of avoca
 
 # Show the plot
 plt.show()
+
+
+# Subset avocados for the conventional type, and the average price column. Create a histogram.
+# Create a histogram of avg_price for organic type avocados.
+# Add a legend to your plot, with the names "conventional" and "organic".
+# Show your plot.
+
+# Histogram of conventional avg_price 
+
+avocados[avocados["type"] == "conventional"]["avg_price"].hist(alpha=0.5, bins=20)
+# Histogram of organic avg_price
+avocados[avocados["type"]=="organic"]["avg_price"].hist()
+
+# Add a legend
+plt.legend("conventional", "organic")
+
+# Show the plot
+plt.show()
