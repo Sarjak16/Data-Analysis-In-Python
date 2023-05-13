@@ -24,3 +24,12 @@ taxi_own_veh = taxi_owners.merge(taxi_veh, on='vid', suffixes=('_own','_veh'))
 
 # Print the value_counts to find the most popular fuel_type
 print(taxi_own_veh['fuel_type'].value_counts())
+
+
+# Merge wards and census on the ward column and save the result to wards_census.
+
+# Merge the wards and census tables on the ward column
+wards_census = wards.merge(census, on='ward')
+
+# Print the shape of wards_census
+print('wards_census table shape:', wards_census.shape)
