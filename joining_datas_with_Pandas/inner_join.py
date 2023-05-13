@@ -15,3 +15,12 @@ taxi_own_veh = taxi_owners.merge(taxi_veh, on='vid', suffixes= ('_own', '_veh'))
 
 # Print the column names of taxi_own_veh
 print(taxi_own_veh.columns)
+
+
+# Select the fuel_type column from taxi_own_veh and print the value_counts() to find the most popular fuel_types used.
+
+# Merge the taxi_owners and taxi_veh tables setting a suffix
+taxi_own_veh = taxi_owners.merge(taxi_veh, on='vid', suffixes=('_own','_veh'))
+
+# Print the value_counts to find the most popular fuel_type
+print(taxi_own_veh['fuel_type'].value_counts())
