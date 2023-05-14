@@ -37,3 +37,14 @@ licenses_zip_ward = licenses.merge(zip_demo, on='zip') \
 
 # Print the results by alderman and show median income
 print(licenses_zip_ward.groupby('alderman').agg({'income':'median'}))
+
+
+
+# one to many merge..................................................................................
+
+# Merge land_use and census on the ward column. Merge the result of this with licenses on the ward column, using the suffix _cen for the left table and _lic for the right table.
+# Save this to the variable land_cen_lic.
+
+# Merge land_use and census and merge result with licenses including suffixes
+land_cen_lic = land_use.merge(census, on='ward')\
+.merge(licenses, on='ward', suffixes=('_cen', '_lic'))
