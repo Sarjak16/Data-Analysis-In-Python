@@ -39,6 +39,16 @@ licenses_zip_ward = licenses.merge(zip_demo, on='zip') \
 print(licenses_zip_ward.groupby('alderman').agg({'income':'median'}))
 
 
+# Group land_cen_lic by ward, pop_2010 (the population in 2010), and vacant, then count the number of accounts. Save the results to pop_vac_lic
+
+# Merge land_use and census and merge result with licenses including suffixes
+land_cen_lic = land_use.merge(census, on='ward') \
+                    .merge(licenses, on='ward', suffixes=('_cen','_lic'))
+
+# Group by ward, pop_2010, and vacant, then count the # of accounts
+pop_vac_lic = land_cen_lic.groupby(['ward', 'pop_2010', 'vacant'],
+                                   as_index=False).agg({'account':'count'})
+
 
 # one to many merge..................................................................................
 
