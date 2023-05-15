@@ -67,3 +67,13 @@ print('wards_census_altered table shape:', wards_census_altered.shape)
 # Merge movies and financials with a left join
 movies_financials = movies.merge(financials, on='id', how='left')
 
+#Count the number of rows in movies_financials with a null value in the budget column.
+
+# Merge the movies table with the financials table with a left join
+movies_financials = movies.merge(financials, on='id', how='left')
+
+# Count the number of rows in the budget column that are missing
+number_of_missing_fin = movies_financials['budget'].isnull().sum()
+
+# Print the number of movies missing financials
+print(number_of_missing_fin)
