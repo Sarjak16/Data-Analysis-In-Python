@@ -77,3 +77,13 @@ number_of_missing_fin = movies_financials['budget'].isnull().sum()
 
 # Print the number of movies missing financials
 print(number_of_missing_fin)
+
+# enriching dataset.........................................................................................................................
+#Merge toy_story and taglines on the id column with a left join, and save the result as toystory_tag.
+
+# Merge the toy_story and taglines tables with a left join
+toystory_tag = toy_story.merge(taglines, on='id', how='left')
+
+# Print the rows and shape of toystory_tag
+print(toystory_tag)
+print(toystory_tag.shape)
