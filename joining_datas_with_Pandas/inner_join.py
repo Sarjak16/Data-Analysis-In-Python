@@ -106,3 +106,10 @@ print(toystory_tag.shape)
 action_scifi = action_movies.merge(scifi_movies, on='movie_id', how='right')
 
 
+# Update the merge to add suffixes, where '_act' and '_sci' are suffixes for the left and right tables, respectively.
+# Merge action_movies to scifi_movies with right join
+action_scifi = action_movies.merge(scifi_movies, on='movie_id', how='right',
+                                   suffixes=('_act', '_sci'))
+
+# Print the first few rows of action_scifi to see the structure
+print(action_scifi.head())
