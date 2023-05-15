@@ -104,3 +104,5 @@ print(toystory_tag.shape)
 # Merge action_movies and scifi_movies tables with a right join on movie_id. Save the result as action_scifi.
 # Merge action_movies to scifi_movies with right join
 action_scifi = action_movies.merge(scifi_movies, on='movie_id', how='right')
+
+
