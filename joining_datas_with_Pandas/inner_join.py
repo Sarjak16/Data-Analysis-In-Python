@@ -56,3 +56,14 @@ wards_census_altered = wards.merge( census_altered, on='ward')
 
 # Print the shape of wards_census_altered
 print('wards_census_altered table shape:', wards_census_altered.shape)
+
+
+
+
+
+# left join..................................................................................................................................
+# Merge the movies table, as the left table, with the financials table using a left join, and save the result to movies_financials.
+
+# Merge movies and financials with a left join
+movies_financials = movies.merge(financials, on='id', how='left')
+
