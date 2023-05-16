@@ -187,3 +187,15 @@ print(iron_1_and_2[m].head())
 # Merge the crews table to itself
 crews_self_merged = crews.merge(crews, on='id', suffixes=('_dir', '_crew'))
 
+
+# Create a Boolean index, named boolean_filter,
+# that selects rows from the left table with the job of 'Director' and avoids rows with the job of 'Director' in the right table.
+
+# Merge the crews table to itself
+crews_self_merged = crews.merge(crews, on='id', how='inner',
+                                suffixes=('_dir','_crew'))
+
+# Create a Boolean index to select the appropriate
+boolean_filter = ((crews_self_merged['job_dir'] =='Director') & 
+     (crews_self_merged['job_crew'] != 'Director'))
+direct_crews = crews_self_merged[boolean_filter]
