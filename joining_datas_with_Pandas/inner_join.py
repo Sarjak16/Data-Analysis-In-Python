@@ -179,4 +179,11 @@ m = ((iron_1_and_2['name_1'].isnull()) |
 # Print the first few rows of iron_1_and_2
 print(iron_1_and_2[m].head())
 
+# self join.........................................................................................................................................................
+
+# To a variable called crews_self_merged, merge the crews table to itself on the id column using an inner join, setting the suffixes to '_dir' and '_crew' for the left
+# and right tables respectively.
+
+# Merge the crews table to itself
+crews_self_merged = crews.merge(crews, on='id', suffixes=('_dir', '_crew'))
 
