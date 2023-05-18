@@ -48,3 +48,11 @@ rice_consumption = food_consumption[food_consumption['food_category']== 'rice']
 # Histogram of co2_emission for rice and show plot
 rice_consumption.co2_emission.hist()
 plt.show()
+
+
+# Use .agg() to calculate the mean and median of co2_emission for rice.
+# Subset for food_category equals rice
+rice_consumption = food_consumption[food_consumption['food_category'] == 'rice']
+
+# Calculate mean and median of co2_emission with .agg()
+print(rice_consumption.agg([np.mean, np.median]))
