@@ -36,3 +36,10 @@ plt.show()
 food_consumption[food_consumption['food_category'] == 'eggs']['co2_emission'].hist();
 # Show plot
 plt.show()
+
+# Finding outliers......................................................................................................
+# Calculate the total co2_emission per country by grouping by country and taking the sum of co2_emission. Store the resulting DataFrame as emissions_by_country.
+# Calculate total co2_emission per country: emissions_by_country
+emissions_by_country =  food_consumption.groupby('country')['co2_emission'].sum()
+
+print(emissions_by_country)
