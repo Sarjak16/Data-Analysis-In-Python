@@ -16,3 +16,16 @@ size_dist = size_dist.reset_index()
 size_dist.columns = ['group_size', 'prob']
 
 print(size_dist)
+
+
+# Calculate the expected value of the size_distribution, which represents the expected group size, by multiplying the group_size by the prob and taking the sum.
+# Create probability distribution
+size_dist = restaurant_groups['group_size'].value_counts() / restaurant_groups.shape[0]
+# Reset index and rename columns
+size_dist = size_dist.reset_index()
+size_dist.columns = ['group_size', 'prob']
+
+# Calculate expected value
+expected_value = (size_dist['group_size'] * size_dist['prob']).sum()
+print(expected_value)
+print(expected_value)
