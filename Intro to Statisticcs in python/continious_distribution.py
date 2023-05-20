@@ -43,3 +43,27 @@ from scipy.stats import uniform
 prob_between_10_and_20 = uniform.cdf(20, min_time, max_time) - \
                         uniform.cdf(10, min_time, max_time)
 print(prob_between_10_and_20)
+
+
+# stimulating wait times.............................................................................
+# \Set the random seed to 334.
+# Set random seed to 334
+np.random.seed(334)
+# Import uniform from scipy.stats.
+
+# Set random seed to 334
+np.random.seed(334)
+
+# Import uniform
+from scipy.stats import uniform
+
+# Generate 1000 wait times from the continuous uniform distribution that models Amir's wait time. Save this as wait_times.
+# Set random seed to 334
+np.random.seed(334)
+
+# Import uniform
+from scipy.stats import uniform
+
+# Generate 1000 wait times between 0 and 30 mins
+wait_times = uniform.rvs(0, 30, 1000)
+print(wait_times)
