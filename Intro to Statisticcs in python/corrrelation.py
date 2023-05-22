@@ -26,3 +26,24 @@ plt.show()
 cor = world_happiness['life_exp'].corr(world_happiness['happiness_score'])
 
 print(cor)
+
+# corelation caveats........................................................................
+# Create a seaborn scatterplot (without a trendline) showing the relationship between gdp_per_cap (on the x-axis) and life_exp (on the y-axis).
+# Show the plot
+# Scatterplot of gdp_per_cap and life_exp
+sns.scatterplot(x='gdp_per_cap', y='life_exp', data=world_happiness)
+
+# Show plot
+plt.show()
+
+# Calculate the correlation between gdp_per_cap and life_exp and store as cor.
+# Scatterplot of gdp_per_cap and life_exp
+sns.scatterplot(x='gdp_per_cap', y='life_exp', data=world_happiness)
+
+# Show plot
+plt.show()
+  
+# Correlation between gdp_per_cap and life_exp
+cor = cor = world_happiness['gdp_per_cap'].corr(world_happiness['life_exp'])
+
+print(cor)
