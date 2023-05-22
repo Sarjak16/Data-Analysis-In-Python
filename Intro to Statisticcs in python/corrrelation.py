@@ -77,3 +77,17 @@ plt.show()
 # Calculate correlation
 cor = world_happiness['log_gdp_per_cap'].corr(world_happiness['happiness_score'])
 print(cor)
+
+
+# Create a seaborn scatterplot showing the relationship between grams_sugar_per_day (on the x-axis) and happiness_score (on the y-axis).
+# Calculate the correlation between grams_sugar_per_day and happiness_score.
+
+# Scatterplot of grams_sugar_per_day and happiness_score
+sns.scatterplot(x='grams_sugar_per_day', y='happiness_score', data=world_happiness)
+plt.show()
+
+
+# Correlation between grams_sugar_per_day and happiness_score
+cor =  world_happiness['grams_sugar_per_day'].corr(world_happiness['happiness_score'])
+print(cor)
+
