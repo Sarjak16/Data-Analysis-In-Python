@@ -34,3 +34,25 @@ sns.relplot(x="G1", y="G3", data= student_data, kind= "scatter")
 
 # Show plot
 plt.show()
+
+# Create column subplots based on whether the student received support from the school ("schoolsup"), ordered so that "yes" comes before "no".
+# Adjust to add subplots based on school support
+sns.relplot(x="G1", y="G3", 
+            data=student_data,
+            kind="scatter", col="schoolsup", col_order=["yes", "no"])
+
+# Show plot
+plt.show()
+
+# Add row subplots based on whether the student received support from the family ("famsup"),
+# ordered so that "yes" comes before "no". This will result in subplots based on two factors.
+# Adjust further to add subplots based on family support
+sns.relplot(x="G1", y="G3", 
+            data=student_data,
+            kind="scatter", 
+            col="schoolsup",
+            col_order=["yes", "no"],
+           row="famsup",row_order=["yes", "no"] )
+
+# Show plot
+plt.show()
