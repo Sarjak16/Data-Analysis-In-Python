@@ -70,8 +70,22 @@ import seaborn as sns
 
 # Create line plot of model year vs. horsepower
 
-sns.relplot(kind="line", x="model_year", y="horsepower", data= mpg, ci="none")
+sns.relplot(kind="line", x="model_year", y="horsepower", data= mpg, ci=none)
 
 
 # Show plot
 plt.show()
+
+# Create different lines for each country of origin ("origin") that vary in both line style and color.
+# Import Matplotlib and Seaborn
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Change to create subgroups for country of origin
+sns.relplot(x="model_year", y="horsepower", 
+            data=mpg, kind="line", 
+            ci=None, style="origin")
+
+# Show plot
+plt.show()
+
