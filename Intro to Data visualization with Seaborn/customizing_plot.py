@@ -61,3 +61,17 @@ sns.relplot(x="model_year", y="mpg",
 
 # Show plot
 plt.show()
+
+# Use relplot() and the mpg DataFrame to create a line plot with "model_year" on the x-axis and "horsepower" on the y-axis.
+# Turn off the confidence intervals on the plot.
+# Import Matplotlib and Seaborn
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Create line plot of model year vs. horsepower
+
+sns.relplot(kind="line", x="model_year", y="horsepower", data= mpg, ci="none")
+
+
+# Show plot
+plt.show()
