@@ -89,3 +89,17 @@ sns.relplot(x="model_year", y="horsepower",
 # Show plot
 plt.show()
 
+# Add markers for each data point to the lines.
+# Use the dashes parameter to use solid lines for all countries, while still allowing for different marker styles for each line.
+# Import Matplotlib and Seaborn
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Add markers and make each line have the same style
+sns.relplot(x="model_year", y="horsepower", 
+            data=mpg, kind="line", 
+            ci=None, style="origin", 
+            hue="origin", markers= True, dashes= False)
+
+# Show plot
+plt.show()
