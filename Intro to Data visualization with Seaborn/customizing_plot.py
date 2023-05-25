@@ -34,8 +34,21 @@ import seaborn as sns
 
 # Create a scatter plot of acceleration vs. mpg
 
-sns.relplot(kind="scatter", x= "accleration", y="mpg", data= mpg, style="origin", hue="origin")
+sns.relplot(kind="scatter", x= "acceleration", y="mpg", data= mpg, style="origin", hue="origin")
 
+
+# Show plot
+plt.show()
+
+# lineplots.............................................................................................................................................
+# Use relplot() and the mpg DataFrame to create a line plot with "model_year" on the x-axis and "mpg" on the y-axis.
+# Import Matplotlib and Seaborn
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Create line plot
+
+sns.relplot(kind="line", x="model_year", y="mpg", data= mpg)
 
 # Show plot
 plt.show()
