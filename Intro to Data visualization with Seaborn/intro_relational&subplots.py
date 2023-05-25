@@ -26,3 +26,11 @@ sns.relplot(x="absences", y="G3",
 
 # Show plot
 plt.show()
+
+# CREATING TWO FACTOR SUBPLOTS..............................................................................................
+# Use relplot() to create a scatter plot with "G1" on the x-axis and "G3" on the y-axis, using the student_data DataFrame.
+# Create a scatter plot of G1 vs. G3
+sns.relplot(x="G1", y="G3", data= student_data, kind= "scatter")
+
+# Show plot
+plt.show()
