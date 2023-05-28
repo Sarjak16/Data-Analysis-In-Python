@@ -75,3 +75,13 @@ sns.catplot(x="internet", y="G3", data= student_data, hue="location", sym="", ki
 
 # Show plot
 plt.show()
+
+
+# Adjust the code to make the box plot whiskers to extend to 0.5 * IQR. Recall: the IQR is the interquartile range.
+# Set the whiskers to 0.5 * IQR
+sns.catplot(x="romantic", y="G3",
+            data=student_data,
+            kind="box", whis=0.5)
+
+# Show plot
+plt.show()
