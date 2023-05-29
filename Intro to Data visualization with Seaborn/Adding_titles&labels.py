@@ -24,3 +24,18 @@ g = sns.relplot(x="weight",
 g.fig.suptitle("Car Weight vs. Horsepower")
 # Show plot
 plt.show()
+
+
+
+.......................................................part2......................................................................................
+# Add the following title to the plot: "Average MPG Over Time".
+# Create line plot
+g = sns.lineplot(x="model_year", y="mpg_mean", 
+                 data=mpg_mean,
+                 hue="origin")
+
+# Add a title "Average MPG Over Time"
+g.set_title("Average MPG Over Time")
+
+# Show plot
+plt.show()
