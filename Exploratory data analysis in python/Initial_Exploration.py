@@ -11,3 +11,10 @@ print(unemployment.info())
 # Print the summary statistics (count, mean, standard deviation, min, max, and quartile values) of each numerical column in unemployment.
 # Print summary statistics for numerical columns in unemployment
 print(unemployment.describe())
+
+
+
+#Counting categorical values...............................................................
+# Use a pandas function to count the values associated with each continent in the unemployment DataFrame.
+# Count the values associated with each continent in unemployment
+print(unemployment.continent.value_counts())
