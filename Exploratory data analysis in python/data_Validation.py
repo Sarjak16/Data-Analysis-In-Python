@@ -17,3 +17,13 @@ not_oceania = ~unemployment["continent"].isin(["Oceania"])
 
 # Print unemployment without records related to countries in Oceania
 print(unemployment[not_oceania])
+
+
+# Print the minimum and maximum unemployment rates, in that order, during 2021.
+# Create a boxplot of 2021 unemployment rates, broken down by continent.
+# Print the minimum and maximum unemployment rates during 2021
+print(unemployment["2021"].min(), unemployment["2021"].max())
+
+# Create a boxplot of 2021 unemployment rates, broken down by continent
+sns.boxplot(data= unemployment, x="2021", y="continent")
+plt.show()
