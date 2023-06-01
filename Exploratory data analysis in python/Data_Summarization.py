@@ -15,3 +15,7 @@ continent_summary = unemployment.groupby("continent").agg(
      std_rate_2021= ("2021", "std"),
 )
 print(continent_summary)
+
+# Create a bar plot showing continents on the x-axis and their respective average 2021 unemployment rates on the y-axis.
+sns.barplot(data= unemployment, x="continent", y="2021")
+plt.show()
