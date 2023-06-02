@@ -30,3 +30,12 @@ print(planes.isna().sum())
 # Print the values and frequencies of "Additional_Info".
 # Check the values of the Additional_Info column
 print(planes["Additional_Info"].value_counts())
+
+# Create a boxplot of "Price" by "Airline"
+# Check the values of the Additional_Info column
+print(planes["Additional_Info"].value_counts())
+
+# Create a box plot of Price by Airline
+sns.boxplot(data=planes, x="Airline", y="Price")
+
+plt.show()
