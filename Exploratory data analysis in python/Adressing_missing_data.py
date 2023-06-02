@@ -1,4 +1,4 @@
-# Dealing with missing data
+# Dealing with missing data...................................................................................
 # Print the number of missing values in each column of the DataFrame.
 # Count the number of missing values in each column
 print(planes.isna().sum())
@@ -25,3 +25,8 @@ cols_to_drop = planes.columns[planes.isna().sum() <= threshold]
 planes.dropna(subset=cols_to_drop, inplace=True)
 
 print(planes.isna().sum())
+
+# Strategies for remaining missing data..........................................................................
+# Print the values and frequencies of "Additional_Info".
+# Check the values of the Additional_Info column
+print(planes["Additional_Info"].value_counts())
