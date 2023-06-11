@@ -57,3 +57,7 @@ education_counts_eq =  attrition_eq['Education'].value_counts() / len(attrition_
 
 # Print the results
 print(education_counts_eq)
+
+
+# WEIGHTED Sampling.............................................................................................................................................
+# Plot YearsAtCompany from attrition_pop as a histogram with bins of width 1 from 0 to 40.
