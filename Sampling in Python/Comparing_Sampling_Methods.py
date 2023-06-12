@@ -50,3 +50,10 @@ mean_attrition_strat = attrition_strat.groupby('RelationshipSatisfaction')['Attr
 
 # Print the result
 print(mean_attrition_strat)
+
+
+# Calculate the same thing for the cluster sample 
+mean_attrition_clust = attrition_clust.groupby('RelationshipSatisfaction')['Attrition'].mean()
+
+# Print the result
+print(mean_attrition_clust)
