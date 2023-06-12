@@ -23,3 +23,18 @@ attrition_filtered = attrition_pop[jobrole_condition]
 # Print the result
 print(attrition_filtered)
 
+# Remove any unused categories from JobRole.
+# For each job role in the filtered dataset, take a random sample of ten rows, setting the seed to 2022.
+# Filter for rows where JobRole is in job_roles_samp
+jobrole_condition = attrition_pop['JobRole'].isin(job_roles_samp)
+attrition_filtered = attrition_pop[jobrole_condition]
+
+# Remove categories with no rows
+attrition_filtered['JobRole'] = attrition_filtered['JobRole'].cat.remove_unused_categories()
+
+# Randomly sample 10 employees from each sampled job role
+attrition_clust = attrition_filtered.groupby('JobRole').sample(n=10, random_state= 2022)
+
+
+# Print the sample
+print(attrition_clust)
