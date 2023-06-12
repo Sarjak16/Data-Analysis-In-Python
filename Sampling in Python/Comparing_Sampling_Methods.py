@@ -42,3 +42,11 @@ mean_attrition_srs = attrition_srs.groupby('RelationshipSatisfaction')['Attritio
 
 # Print the result
 print(mean_attrition_srs)
+
+
+# Calculate the proportion of employee attrition for each relationship satisfaction group, this time on the stratified sample, attrition_strat.
+# Calculate the same thing for the stratified sample 
+mean_attrition_strat = attrition_strat.groupby('RelationshipSatisfaction')['Attrition'].mean()
+
+# Print the result
+print(mean_attrition_strat)
