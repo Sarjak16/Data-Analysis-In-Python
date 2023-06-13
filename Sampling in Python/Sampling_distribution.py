@@ -10,3 +10,16 @@ for i in range(500):
   
 # Print out the first few entries of the list
 print(mean_attritions[0:5])
+
+# Draw a histogram of the mean_attritions list with 16 bins.
+# Create an empty list
+mean_attritions = []
+# Loop 500 times to create 500 sample means
+for i in range(500):
+	mean_attritions.append(
+    	attrition_pop.sample(n=60)['Attrition'].mean()
+	)
+
+# Create a histogram of the 500 sample means
+plt.hist(mean_attritions, bins=16)
+plt.show()
