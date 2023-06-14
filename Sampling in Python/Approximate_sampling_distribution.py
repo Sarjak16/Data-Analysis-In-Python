@@ -72,3 +72,15 @@ for i in range(1000):
     
 # Print the first 10 entries of the result
 print(sample_means_1000[0:10])
+
+# Plot sample_means_1000 as a histogram with 20 bins.
+# Replicate the sampling code 1000 times
+sample_means_1000 = []
+for i in range(1000):
+    sample_means_1000.append(
+  		np.random.choice(list(range(1, 9)), size=5, replace=True).mean()
+    )
+
+# Draw a histogram of sample_means_1000 with 20 bins
+plt.hist(sample_means_1000, bins=20)
+plt.show()
