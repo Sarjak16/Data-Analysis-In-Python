@@ -23,6 +23,16 @@ for i in range(1000):
 	mean_danceability_1000.append(
         np.mean(spotify_sample.sample(frac=1, replace=True)['danceability'])
 	)
-  
+  # Create a bootstrap distribution by drawing a histogram of mean_danceability_1000.
+# Replicate this 1000 times
+mean_danceability_1000 = []
+for i in range(1000):
+	mean_danceability_1000.append(
+        np.mean(spotify_sample.sample(frac=1, replace=True)['danceability'])
+	)
+
+# Draw a histogram of the resample means
+plt.hist(mean_danceability_1000)
+plt.show()
 # Print the result
 print(mean_danceability_1000)
