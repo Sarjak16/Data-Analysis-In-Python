@@ -17,3 +17,12 @@ mean_danceability_1 = np.mean(spotify_1_resample['danceability'])
 print(mean_danceability_1)
 
 # Replicate the expression provided 1000 times.
+# Replicate this 1000 times
+mean_danceability_1000 = []
+for i in range(1000):
+	mean_danceability_1000.append(
+        np.mean(spotify_sample.sample(frac=1, replace=True)['danceability'])
+	)
+  
+# Print the result
+print(mean_danceability_1000)
