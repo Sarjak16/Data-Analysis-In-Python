@@ -47,5 +47,25 @@ samp_distn_mean = np.mean(sampling_distribution)
 # Calculate the bootstrap dist'n estimate of mean popularity
 boot_distn_mean = np.mean(bootstrap_distribution)
 
+Calculate the standard deviation of popularity in 4 ways.
+
+# Population: from spotify_population, take the standard deviation of popularity.
+# Original sample: from spotify_sample, take the standard deviation of popularity.
+# Sampling distribution: from sampling_distribution, take its standard deviation and multiply by the square root of the sample size (5000).
+# Bootstrap distribution: from bootstrap_distribution, take its standard deviation and multiply by the square root of the sample size.
+# Calculate the population std dev popularity
+pop_sd = spotify_population['popularity'].std(ddof=0)
+
+# Calculate the original sample std dev popularity
+samp_sd = spotify_sample['popularity'].std()
+
+# Calculate the sampling dist'n estimate of std dev popularity
+samp_distn_sd = np.std(sampling_distribution, ddof=1) * np.sqrt(5000)
+
+# Calculate the bootstrap dist'n estimate of std dev popularity
+boot_distn_sd = np.std(bootstrap_distribution, ddof=1) * np.sqrt(5000)
+
+# Print the standard deviations
+print([pop_sd, samp_sd, samp_distn_sd, boot_distn_sd])
 # Print the means
 print([pop_mean, samp_mean, samp_distn_mean, boot_distn_mean])
