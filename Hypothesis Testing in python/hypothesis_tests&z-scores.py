@@ -28,3 +28,17 @@ z_score = (late_prop_samp - late_prop_hyp) / std_error
 
 # Print z_score
 print(z_score)
+
+
+# Calculating p values.............................................
+
+# Calculate the z-score of late_prop_samp.
+# Calculate the p-value for the z-score, using a right-tailed test.
+# Calculate the z-score of late_prop_samp
+z_score = (late_prop_samp - late_prop_hyp) / std_error
+
+# Calculate the p-value
+p_value = norm.sf(abs(z_score))
+                 
+# Print the p-value
+print(p_value) 
