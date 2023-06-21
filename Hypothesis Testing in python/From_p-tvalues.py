@@ -8,3 +8,14 @@ p_value = t.cdf(t_stat, df=degrees_of_freedom)
 
 # Print the p_value
 print(p_value)
+
+
+# Paired t- test..............................................................................................
+# Create a new diff column containing the percentage of votes for the democratic candidate in 2012 minus the percentage of votes for the democratic candidate in 2016.
+
+# Calculate the differences from 2012 to 2016
+sample_dem_data['diff'] = sample_dem_data['dem_percent_12'] - sample_dem_data['dem_percent_16']
+
+
+# Print sample_dem_data
+print(sample_dem_data)
