@@ -19,3 +19,13 @@ sample_dem_data['diff'] = sample_dem_data['dem_percent_12'] - sample_dem_data['d
 
 # Print sample_dem_data
 print(sample_dem_data)
+
+# Calculate the mean of the diff column as xbar_diff.
+# Calculate the differences from 2012 to 2016
+sample_dem_data['diff'] = sample_dem_data['dem_percent_12'] - sample_dem_data['dem_percent_16']
+
+# Find the mean of the diff column
+xbar_diff = sample_dem_data['diff'].mean()
+
+# Print xbar_diff
+print(xbar_diff)
