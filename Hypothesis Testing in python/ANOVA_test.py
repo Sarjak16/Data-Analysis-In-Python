@@ -15,3 +15,16 @@ s_pack_by_mode = late_shipments.groupby("shipment_mode")['pack_price'].std()
 
 # Print the grouped standard deviations
 print(s_pack_by_mode)
+
+
+# Create a boxplot from late_shipments with "pack_price" as x and "shipment_mode" as y.
+
+# Calculate the mean pack_price for each shipment_mode
+xbar_pack_by_mode = late_shipments.groupby("shipment_mode")['pack_price'].mean()
+
+# Calculate the standard deviation of the pack_price for each shipment_mode
+s_pack_by_mode = late_shipments.groupby("shipment_mode")['pack_price'].std()
+
+# Boxplot of shipment_mode vs. pack_price
+sns.boxplot(x="pack_price", y="shipment_mode", data=late_shipments)
+plt.show()
