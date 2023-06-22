@@ -40,3 +40,14 @@ anova_results = pingouin.anova(data=late_shipments, dv="pack_price", between="sh
 
 # Print anova_results
 print(anova_results)
+
+
+
+# Pairwise ttest.........................................................
+# Perform pairwise t-tests on late_shipments's pack_price variable, grouped by shipment_mode, without doing any p-value adjustment.
+
+# Perform a pairwise t-test on pack price, grouped by shipment mode
+pairwise_results = pingouin.pairwise_ttests(data=late_shipments, dv="pack_price", between="shipment_mode", padjust="none") 
+
+# Print pairwise_results
+print(pairwise_results)
