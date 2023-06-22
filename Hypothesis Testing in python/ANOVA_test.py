@@ -51,3 +51,15 @@ pairwise_results = pingouin.pairwise_ttests(data=late_shipments, dv="pack_price"
 
 # Print pairwise_results
 print(pairwise_results)
+
+
+# Modify the pairwise t-tests to use the Bonferroni p-value adjustment.
+
+# Modify the pairwise t-tests to use Bonferroni p-value adjustment
+pairwise_results = pingouin.pairwise_tests(data=late_shipments, 
+                                           dv="pack_price",
+                                           between="shipment_mode",
+                                           padjust="bonf")
+
+# Print pairwise_results
+print(pairwise_results)
