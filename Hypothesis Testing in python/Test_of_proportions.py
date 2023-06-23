@@ -72,3 +72,15 @@ p_value = 1- norm.cdf(z_score)
 
 # Print p_value
 print(p_value)
+
+
+
+
+# ztest for two samples...........................................................................................................................................
+# Get the counts of the late column grouped by freight_cost_group.
+
+# Count the late column values for each freight_cost_group
+late_by_freight_cost_group =  late_shipments.groupby("freight_cost_group")["late"].value_counts()
+
+# Print the counts
+print(late_by_freight_cost_group)
