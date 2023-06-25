@@ -94,3 +94,14 @@ plt.bar(incoterm_counts['vendor_inco_term'], incoterm_counts['n'], color="red", 
 plt.bar(hypothesized["vendor_inco_term"],hypothesized["n"], alpha= 0.5, color="blue", label="Hypothesized")
 plt.legend()
 plt.show()
+
+
+
+# Goodnessfit test
+# Using the incoterm_counts and hypothesized datasets, perform a chi-square goodness of fit test on the incoterm counts, n.
+# Perform a goodness of fit test on the incoterm counts n
+gof_test = chisquare(f_obs=incoterm_counts["n"], f_exp=hypothesized["n"])
+
+
+# Print gof_test results
+print(gof_test)
