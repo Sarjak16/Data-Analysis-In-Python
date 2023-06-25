@@ -46,3 +46,13 @@ expected, observed, stats = pingouin.chi2_independence(data=late_shipments,x='ve
 
 # Print results
 print(stats[stats['test'] == 'pearson']) 
+
+
+# ...................................................................................................................................................................
+# chi square goodness test
+# Find the total number of rows in late_shipments.
+# Find the number of rows in late_shipments
+n_total = len(late_shipments)
+
+# Print n_total
+print(n_total)
