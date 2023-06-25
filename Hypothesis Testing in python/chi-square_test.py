@@ -56,3 +56,14 @@ n_total = len(late_shipments)
 
 # Print n_total
 print(n_total)
+
+
+# Add a column named n to the hypothesized DataFrame that is the hypothesized prop column times n_total.
+# Find the number of rows in late_shipments
+n_total = len(late_shipments)
+
+# Create n column that is prop column * n_total
+hypothesized['n'] = hypothesized['prop'] * n_total
+
+# Print the modified hypothesized DataFrame
+print(hypothesized)
