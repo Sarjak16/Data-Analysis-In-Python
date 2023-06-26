@@ -33,3 +33,16 @@ print(counts)
 
 # Inspect whether the counts are big enough
 print((counts >= 5).all())
+
+
+# Get the count of each value in the shipment_mode column of late_shipments.
+# Insert a suitable number to inspect whether the counts are "big enough" for an ANOVA test.
+
+# Count the shipment_mode values
+counts =  late_shipments["shipment_mode"].value_counts()
+
+# Print the result
+print(counts)
+
+# Inspect whether the counts are big enough
+print((counts >= 25).all())
