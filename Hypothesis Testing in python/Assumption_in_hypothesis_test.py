@@ -45,4 +45,4 @@ counts =  late_shipments["shipment_mode"].value_counts()
 print(counts)
 
 # Inspect whether the counts are big enough
-print((counts >= 25).all())
+print((counts >= 30).all())
