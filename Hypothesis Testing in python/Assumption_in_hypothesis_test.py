@@ -21,3 +21,15 @@ print(counts)
 
 # Inspect whether the counts are big enough
 print((counts >= 10).all())
+
+
+# Get the count of each value in the freight_cost_group column of late_shipments grouped by vendor_inco_term.
+# Insert a suitable number to inspect whether the counts are "big enough" for a chi-square independence test.
+# Count the values of freight_cost_group grouped by vendor_inco_term
+counts = late_shipments.groupby("vendor_inco_term")["freight_cost_group"].value_counts()
+
+# Print the result
+print(counts)
+
+# Inspect whether the counts are big enough
+print((counts >= 5).all())
