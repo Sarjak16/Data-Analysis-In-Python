@@ -8,3 +8,16 @@ print(counts)
 
 # Inspect whether the counts are big enough
 print((counts >= 30).all())
+
+
+# Get the count of each value in the late column of late_shipments.
+# Insert a suitable number to inspect whether the counts are "big enough" for a one sample proportion test.
+
+# Count the late values
+counts = late_shipments["late"].value_counts()
+
+# Print the result
+print(counts)
+
+# Inspect whether the counts are big enough
+print((counts >= 10).all())
