@@ -34,3 +34,14 @@ wmw_test = pingouin.mwu(x=weight_vs_late_wide['No'],
 
 # Print the test results
 print(wmw_test)
+
+
+# Run a Kruskal-Wallis test on weight_kilograms between the different shipment modes in late_shipments.
+# Run a Kruskal-Wallis test on weight_kilograms vs. shipment_mode
+kw_test =pingouin.kruskal(data=late_shipments, dv='weight_kilograms', 
+                     between='shipment_mode')
+
+
+
+# Print the results
+print(kw_test)
