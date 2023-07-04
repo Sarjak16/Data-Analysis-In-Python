@@ -36,3 +36,27 @@ print(filtered_sales.groupby(['product_line', 'product'])['unit_price'].min())
 
 churn_by_credit_score = churn.pivot_table("credit_score", index="geography", columns="exited")
 print(churn_by_credit_score.mean(axis='index'))
+
+
+
+# Q4.
+#   surname  credit_score geography  age exited
+# 0  Hargrave           619    France   42    Yes
+# 1      Hill           608     Spain   41     No
+# 2      Onio           502    France   42    Yes
+# 3      Boni           699    France   39     No
+# 4  Mitchell           850     Spain   43     No
+
+# Expected output:
+#     credit_score     age
+# count        15.000  15.000
+# mean        599.400  36.667
+# std         129.742   8.006
+# min         376.000  24.000
+# 25%         501.500  30.000
+# 50%         608.000  39.000
+# 75%         664.500  42.500
+# max         850.000  50.000
+
+print(churn.describe())
+
