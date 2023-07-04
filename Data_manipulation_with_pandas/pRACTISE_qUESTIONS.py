@@ -18,10 +18,21 @@ print(churn.index())
 # 6   2018-01-17             Sports    Yoga mat       29.99         3
 
 filtered_sales = sales[sales["product_line"].isin(["Health and beauty", "Sports"])]
-print(filtered_sales.groupby([
-'product_line'
-, 
-'product'
-])[
-'unit_price'
-].min())
+print(filtered_sales.groupby(['product_line', 'product'])['unit_price'].min())
+
+
+# 3.
+# exited             No    Yes
+# geography                   
+# France     608.428571  560.5
+# Germany           NaN  376.0
+# Spain      647.500000  645.0
+
+# expected output:
+# exited
+# No     627.964
+# Yes    527.167
+# dtype: float64
+
+churn_by_credit_score = churn.pivot_table("credit_score", index="geography", columns="exited")
+print(churn_by_credit_score.mean(axis='index'))
